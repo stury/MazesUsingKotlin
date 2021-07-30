@@ -11,10 +11,10 @@ class RecursiveBacktracker : MazeGenerator() {
         val stack = mutableListOf<Cell>()
         stack.add(at)
 
-        while ( stack.count() > 0 ) {
+        while ( stack.isNotEmpty() ) {
             val current = stack.last()
-            val neighbors = current.neighbors().filter { cell -> cell.links.count() == 0 }
-            if ( neighbors.count() == 0 ) {
+            val neighbors = current.neighbors().filter { cell -> cell.links.isEmpty() }
+            if ( neighbors.isEmpty() ) {
                 stack.removeLast()
             }
             else {

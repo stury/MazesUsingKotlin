@@ -7,7 +7,7 @@ abstract class MazeGenerator {
  }
 
 // Add in a static routine to return a random MazeGenerator object.
-public fun randomMazeGenerator() : MazeGenerator {
-    val mazes = listOf<MazeGenerator>(BinaryTree(), RecursiveBacktracker() )
+fun randomMazeGenerator() : MazeGenerator {
+    val mazes = listOf(BinaryTree(), RecursiveBacktracker())
     return mazes[Random.nextInt(mazes.count())]
 }

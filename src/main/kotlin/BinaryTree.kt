@@ -21,7 +21,7 @@ class BinaryTree : MazeGenerator() {
                 print("Unknown Cell sent to BinaryTree to process!")
             }
 
-            if (neighbors.count() > 0) {
+            if (neighbors.isNotEmpty()) {
                 val neighbor : Cell = when( neighbors.count() ) {
                     1 -> neighbors[0]
                     else -> {
