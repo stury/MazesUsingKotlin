@@ -1,3 +1,3 @@
 
-rootProject.name = "MazesUsingKotlin"
+rootProject.name = "src"
 
