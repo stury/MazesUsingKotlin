@@ -1,3 +1,3 @@
 
-rootProject.name = "maze"
+rootProject.name = "MazesUsingKotlin"
 
