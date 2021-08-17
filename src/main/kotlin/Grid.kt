@@ -2,9 +2,9 @@ package main.kotlin
 
 import kotlin.random.Random
 
-class Grid(val size: Size) {
+open class Grid(val size: Size) {
 
-    private var grid : List<List<Cell?>>
+    public var grid : List<List<Cell?>>
 
     init {
         // Upon construction of the class, we should then create the list of cells
@@ -101,6 +101,10 @@ class Grid(val size: Size) {
 //        }
 //    }
 
+    open fun contentsOfCell(cell: Cell) : String {
+        return " "
+    }
+
     fun description() : String {
         var result = "+" + ("---+" * (size.x)) + "\n"
 
@@ -112,7 +116,7 @@ class Grid(val size: Size) {
                 val corner = "+"
 
                 if (cell != null) {
-                    val contents = " "
+                    val contents = contentsOfCell(cell)
                     val body : String
 
                     val length = contents.count()

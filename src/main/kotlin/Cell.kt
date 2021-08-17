@@ -49,6 +49,32 @@ class Cell(val location: Location) {
 
     // TODO:  need to implement Distances
 
+    fun distances() : Distances {
+        val result = Distances(this)
+
+        var frontier : List<Cell> = mutableListOf(this)
+
+        while (frontier.isNotEmpty()) {
+            val newFrontier = mutableListOf<Cell>()
+
+            for (cell in frontier) {
+                val cellDistance=result.cells[cell]
+                if (cellDistance != null) {
+                    for (linked in cell.links) {
+                        val linkedCell = result.cells[linked]
+                        if (linkedCell == null) {
+                            result.cells[linked] = cellDistance + 1
+                            newFrontier.add(linked)
+                        }
+                    }
+                }
+            }
+
+            frontier = newFrontier
+        }
+
+        return result
+    }
 
 
 }
