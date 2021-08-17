@@ -45,10 +45,6 @@ class Cell(val location: Location) {
         return result.filterNotNull()
     }
 
-
-
-    // TODO:  need to implement Distances
-
     fun distances() : Distances {
         val result = Distances(this)
 
@@ -75,6 +71,5 @@ class Cell(val location: Location) {
 
         return result
     }
-
 
 }
