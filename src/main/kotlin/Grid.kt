@@ -28,6 +28,20 @@ open class Grid(val size: Size) {
         return myGrid
     }
 
+    // This is the subscript operator oin Kotlin.  I'm overriding it for this class,
+    // so you can request the Cell at the Location you specify in the Grid.
+    operator fun get(location:Location) : Cell? {
+        var result : Cell? = null
+
+        if (location.y >= 0 && location.y < size.y &&
+            location.x >= 0 && location.x < size.x ) {
+
+            result = grid[location.y][location.x]
+        }
+
+        return result
+    }
+
     private fun configureCells() {
         val height = size.y
         val width = size.x

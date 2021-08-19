@@ -21,7 +21,7 @@ fun path(maze:DistanceGrid, startCell:Cell? = null, endCell:Cell? = null) {
     if (start != null ) {
         var distances = start.distances()
         maze.distances = distances
-        var end = maze.grid[maze.grid.count() - 1][maze.grid[maze.grid.count() - 1].count() - 1]
+        var end = maze[Location(maze.grid[maze.grid.count() - 1].count() - 1, maze.grid.count() - 1,)]
         if ( endCell != null ) {
             end = endCell
         }
