@@ -5,7 +5,7 @@ class Distances( val root : Cell ) {
     var cells : MutableMap<Cell,Int>
 
     init {
-        cells = mutableMapOf<Cell,Int>()
+        cells = mutableMapOf()
         cells[root] = 0
     }
 
@@ -21,7 +21,7 @@ class Distances( val root : Cell ) {
 
     fun path(goal: Cell) : Distances {
 
-        val result : Distances = Distances(root)
+        val result = Distances(root)
         var current = goal
 
         val item = cells[current]

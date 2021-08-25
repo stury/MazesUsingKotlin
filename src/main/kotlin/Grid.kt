@@ -4,7 +4,7 @@ import kotlin.random.Random
 
 open class Grid(val size: Size) {
 
-    public var grid : List<List<Cell?>>
+    var grid : List<List<Cell?>>
 
     init {
         // Upon construction of the class, we should then create the list of cells
