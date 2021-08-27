@@ -2,10 +2,9 @@ package main.kotlin
 
 class Distances( val root : Cell ) {
 
-    var cells : MutableMap<Cell,Int>
+    var cells : MutableMap<Cell,Int> = mutableMapOf()
 
     init {
-        cells = mutableMapOf()
         cells[root] = 0
     }
 

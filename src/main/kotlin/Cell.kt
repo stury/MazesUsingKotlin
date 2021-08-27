@@ -22,7 +22,7 @@ class Cell(val location: Location) {
     fun unlink( cell: Cell, bidirectional: Boolean = true ) {
         if ( links.contains(cell) ) {
             val newLinks = links.filter { it != cell }
-            links = mutableListOf<Cell>()
+            links = mutableListOf()
             links.addAll(newLinks)
             if ( bidirectional ) {
                 cell.unlink(this, false)

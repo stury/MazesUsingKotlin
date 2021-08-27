@@ -4,10 +4,10 @@ import kotlin.random.Random
 
 class RecursiveBacktracker : MazeGenerator() {
     override fun on(grid: Grid) {
-        on(grid, grid.randomCell())
+        on(grid.randomCell())
     }
 
-    private fun on( grid: Grid, at: Cell) {
+    private fun on(at: Cell) {
         val stack = mutableListOf<Cell>()
         stack.add(at)
 
